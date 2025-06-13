@@ -6,6 +6,7 @@ pomocy z np.
 3. Generowaniem przypadków testowych dla opisanej funkcjonalności
 
 Aplikacja zawiera także opcję wybierania języków(angielski i polski) co zmienia prompt, oraz wybór między krótką i zwięzłą odpowiedzią AI a długą, szczegółową.
+
 Autor: Szymon Masłoń
 ## Przykładowe testy
 
