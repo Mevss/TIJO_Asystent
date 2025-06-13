@@ -1,5 +1,50 @@
+# Asystent AI dla Testera Oprogramowania
+Jest to prosta aplikacja webowa z interfejsem która wykorzystuje framework **Flask** wraz z **API Gemini 2.0** aby umożliwić testerom oprogramowania otrzymanie
+pomocy z np. 
+1. Testowaniem kodu pod względem naruszania zasad SOLID, prawa Demeter oraz sprawdzaniem jakości kodu. 
+2. Generowaniem testów jednostkowych na podstawie kodu,
+3. Generowaniem przypadków testowych dla opisanej funkcjonalności
+Autor: Szymon Masłoń
+## Przykładowe testy
+
+### TEST FOR SOLID
+#### Prompt
+```
+class Order:
+    def __init__(self, id, items, customer):
+        self.id = id
+        self.items = items
+        self.customer = customer
+
+
+class OrderProcessor:
+    def __init__(self, order):
+        self.order = order
+
+    def process_order(self):
+        self._validate_order()
+        self._save_order_to_database()
+        self._send_confirmation_email()
+
+    def _validate_order(self):
+        print("Walidacja zamowienia.")
+
+    def _save_order_to_database(self):
+        print("Zapisywanie zamowienia do bazy danych.")
+
+    def _send_confirmation_email(self):
+        print("Wysylanie e-maila potwierdzajacego.")
+
+
+order = Order("123", ["Produkt A", "Produkt B"], "Jan Kowalski")
+processor = OrderProcessor(order)
+processor.process_order()
+```
+#### Rezultat
+![](https://github.com/Mevss/TIJO_Asystent/blob/main/img/1.png)
 
 ### UNIT TEST
+#### Prompt
 ```
 class ShoppingCart:
     def __init__(self):
@@ -51,41 +96,12 @@ class ShoppingCart:
         return True
 
 ```
+#### Rezultat
+![](https://github.com/Mevss/TIJO_Asystent/blob/main/img/2.png)
 
-### TEST FOR SOLID
-#### SRP
-```class Order:
-    def __init__(self, id, items, customer):
-        self.id = id
-        self.items = items
-        self.customer = customer
-
-
-class OrderProcessor:
-    def __init__(self, order):
-        self.order = order
-
-    def process_order(self):
-        self._validate_order()
-        self._save_order_to_database()
-        self._send_confirmation_email()
-
-    def _validate_order(self):
-        print("Walidacja zamowienia.")
-
-    def _save_order_to_database(self):
-        print("Zapisywanie zamowienia do bazy danych.")
-
-    def _send_confirmation_email(self):
-        print("Wysylanie e-maila potwierdzajacego.")
-
-
-order = Order("123", ["Produkt A", "Produkt B"], "Jan Kowalski")
-processor = OrderProcessor(order)
-processor.process_order()
-```
 
 ### TEST CASES
+#### Prompt
 ```
 function calculateAge(birthDate, currentDate = new Date()) {
 
@@ -170,3 +186,5 @@ public class BankAccount {
     }
 }
 ```
+#### Rezultat
+![](https://github.com/Mevss/TIJO_Asystent/blob/main/img/3.png)
