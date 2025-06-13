@@ -4,6 +4,7 @@ pomocy z np.
 1. Testowaniem kodu pod względem naruszania zasad SOLID, prawa Demeter oraz sprawdzaniem jakości kodu. 
 2. Generowaniem testów jednostkowych na podstawie kodu,
 3. Generowaniem przypadków testowych dla opisanej funkcjonalności
+Aplikacja zawiera także opcję wybierania języków(angielski i polski) co zmienia prompt, oraz wybór między krótką i zwięzłą odpowiedzią AI a długą, szczegółową.
 Autor: Szymon Masłoń
 ## Przykładowe testy
 
