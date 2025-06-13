@@ -1,4 +1,3 @@
-pip install -q -U google-genai
 
 ### UNIT TEST
 ```
